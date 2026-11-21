@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دعوة زواج ريم وفهد</title>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#12303a;--bg2:#0b222a;--ink:#f3ece0;--muted:#b9c7c6;--gold:#d8b46a;--line:rgba(216,180,106,.35);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#12303a;--bg2:#0b222a;--ink:#f3ece0;--muted:#b9c7c6;--gold:#d8b46a}}
+:root[data-theme="dark"]{--bg:#12303a;--bg2:#0b222a;--ink:#f3ece0;--muted:#b9c7c6;--gold:#d8b46a}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:radial-gradient(120% 80% at 50% 0%,var(--bg),var(--bg2)) fixed;color:var(--ink);font-family:'Tajawal',Tahoma,sans-serif;line-height:1.8;min-height:100vh;overflow-x:hidden}
+
+#lock{position:fixed;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+  background:radial-gradient(120% 80% at 50% 0%,var(--bg),var(--bg2));border:0;color:var(--ink);font:inherit;cursor:pointer;width:100%;
+  transition:opacity .8s ease}
+#lock.gone{opacity:0;pointer-events:none}
+#lock svg{width:120px;height:140px;animation:pulse 2.6s ease-in-out infinite}
+#lock.opening svg{animation:none}
+#shackle{transform-box:fill-box;transform-origin:100% 100%;transition:transform .7s cubic-bezier(.3,1.4,.5,1)}
+#lock.opening #shackle{transform:translateY(-12px) rotate(28deg)}
+#lock .t{font-family:'Aref Ruqaa',serif;font-size:30px;color:var(--gold)}
+#lock .h{color:var(--muted);font-size:15px}
+#lock:focus-visible{outline:3px solid var(--gold);outline-offset:-8px}
+@keyframes pulse{50%{transform:scale(1.05)}}
+
+#inv{max-width:440px;margin:0 auto;padding:56px 24px 72px;text-align:center;opacity:0;transition:opacity 1.2s ease .3s}
+#inv.show{opacity:1}
+.sm{color:var(--muted);font-size:15px}
+.names{font-family:'Aref Ruqaa','Amiri',serif;font-size:clamp(52px,16vw,72px);line-height:1.3;color:var(--gold);margin:14px 0 18px}
+.names small{display:block;font-size:.4em;color:var(--ink)}
+.date{font-size:20px;font-weight:700}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:36px 0 0}
+.count div{border-top:1px solid var(--line);padding-top:10px}
+.count b{display:block;font-size:32px;font-weight:500;font-variant-numeric:tabular-nums;color:var(--gold)}
+.count span{font-size:13px;color:var(--muted)}
+#done{display:none;color:var(--gold);font-family:'Aref Ruqaa',serif;font-size:26px;margin-top:36px}
+section{margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
+h2{font-size:20px;font-weight:700}
+.btn{display:inline-block;margin-top:16px;padding:12px 28px;color:var(--bg2);background:var(--gold);text-decoration:none;font-weight:700;border-radius:999px}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.qrbox{display:inline-block;background:#fffaf0;padding:14px 14px 8px;border-radius:14px;width:200px;margin-top:14px}
+.qrbox svg{display:block;width:100%;height:auto}
+.qrbox .nm{font-family:'Aref Ruqaa',serif;color:#12303a;font-size:22px;line-height:1.5;margin-top:4px}
+.qrbox .nm i{color:#c0392b;font-style:normal}
+.note{margin-top:36px;color:var(--muted);font-size:12px}
+
+#mus{position:fixed;z-index:15;bottom:calc(16px + env(safe-area-inset-bottom,0px));inset-inline-start:16px;display:none;
+  background:rgba(11,34,42,.8);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer}
+#mus:focus-visible{outline:3px solid var(--gold)}
+
+.bf{position:fixed;z-index:10;bottom:-50px;pointer-events:none;animation:rise linear forwards}
+.bf>div{animation:sway ease-in-out infinite alternate}
+.bf svg{display:block;width:100%;height:auto}
+.wg{transform-origin:20px 15px;animation:flap .22s ease-in-out infinite alternate}
+@keyframes rise{to{transform:translateY(-120vh)}}
+@keyframes sway{from{transform:translateX(-30px) rotate(-8deg)}to{transform:translateX(30px) rotate(8deg)}}
+@keyframes flap{to{transform:scaleX(.35)}}
+@media (prefers-reduced-motion: reduce){#lock svg{animation:none}.bf{display:none}}
+</style>
+</head>
+<body>
+
+<button id="lock" type="button" aria-label="افتح الدعوة">
+  <svg viewBox="0 0 120 140" aria-hidden="true">
+    <path id="shackle" d="M36 64V44a24 24 0 0 1 48 0v20" fill="none" stroke="#d8b46a" stroke-width="10" stroke-linecap="round"/>
+    <rect x="15" y="62" width="90" height="68" rx="12" fill="#d8b46a"/>
+    <circle cx="60" cy="88" r="8" fill="#0b222a"/><rect x="57" y="92" width="6" height="20" rx="3" fill="#0b222a"/>
+  </svg>
+  <span class="t">دعوة زواج</span>
+  <span class="h">اضغط على القفل لفتح الدعوة</span>
+</button>
+
+<button id="mus" type="button" aria-pressed="true">إيقاف الموسيقى</button>
+
+<main id="inv">
+  <p class="sm">بسم الله الرحمن الرحيم</p>
+  <p class="sm" style="margin-top:18px">يتشرف آل العمري وآل الحربي<br>بدعوتكم لحضور حفل زواج</p>
+  <h1 class="names">ريم<small>و</small>فهد</h1>
+  <p class="date">الجمعة ١٨ ديسمبر ٢٠٢٦</p>
+  <p class="sm">الساعة ٨:٠٠ مساءً</p>
+
+  <div class="count" id="count" aria-live="polite">
+    <div><b id="d">0</b><span>يوم</span></div>
+    <div><b id="h">0</b><span>ساعة</span></div>
+    <div><b id="m">0</b><span>دقيقة</span></div>
+    <div><b id="s">0</b><span>ثانية</span></div>
+  </div>
+  <p id="done">حان موعد الفرح، حياكم الله</p>
+
+  <section>
+    <h2>قاعة الياسمين</h2>
+    <p class="sm">طريق الملك فهد، الرياض</p>
+    <a class="btn" target="_blank" rel="noopener"
+       href="https://www.google.com/maps/search/?api=1&query=%D9%82%D8%A7%D8%B9%D8%A9+%D8%A7%D9%84%D9%8A%D8%A7%D8%B3%D9%85%D9%8A%D9%86+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6">افتح الموقع في الخريطة</a>
+  </section>
+
+  <section class="qr">
+    <p class="sm">امسح الرمز لفتح الدعوة</p>
+    <div class="qrbox"><div id="qrsvg"></div><div class="nm">ريم <i>♥</i> فهد</div></div>
+  </section>
+
+  <p class="note">دعوة تجريبية، الأسماء والمكان والتاريخ وهمية</p>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+// ضع هنا رابط ملف الأغنية إن وجد. إذا تُرك فارغاً تُشغَّل نغمة هادئة أصلية.
+var SONG_SRC = '';
+// تاريخ الفرح (سنة-شهر-يومTساعة:دقيقة)
+var target = new Date('2026-12-18T20:00:00').getTime();
+
+var $ = function(i){return document.getElementById(i)};
+var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var ids = ['d','h','m','s'].map(function(i){return $(i)});
+function tick(){
+  var diff = target - Date.now();
+  if (diff <= 0){ $('count').style.display='none'; $('done').style.display='block'; return; }
+  var v = [Math.floor(diff/864e5), Math.floor(diff%864e5/36e5), Math.floor(diff%36e5/6e4), Math.floor(diff%6e4/1e3)];
+  v.forEach(function(n,i){ids[i].textContent = n.toLocaleString('ar-EG')});
+  setTimeout(tick, 1000);
+}
+tick();
+
+try{
+  var qr=qrcode(0,'H'); qr.addData(location.href); qr.make();
+  var n=qr.getModuleCount(), q=3, S=n+q*2, p='';
+  for(var r=0;r<n;r++)for(var c=0;c<n;c++)if(qr.isDark(r,c))p+='M'+(c+q)+' '+(r+q)+'h1v1h-1z';
+  var w=S*0.2, x=(S-w)/2, s=w*0.62/24, t=(S-24*s)/2;
+  $('qrsvg').innerHTML='<svg viewBox="0 0 '+S+' '+S+'" role="img" aria-label="رمز QR للدعوة"><path d="'+p+'" fill="#12303a"/>'+
+    '<rect x="'+x+'" y="'+x+'" width="'+w+'" height="'+w+'" rx="'+(w*0.25)+'" fill="#fffaf0"/>'+
+    '<g transform="translate('+t+' '+(t+s*0.5)+') scale('+s+')"><path fill="#c0392b" d="M12 21s-7-4.6-9.5-9C.9 8.8 2.6 5 6.2 5c2 0 3.2 1 3.8 2 .6-1 1.8-2 3.8-2 3.6 0 5.3 3.8 3.7 7-2.5 4.4-9.5 9-9.5 9z"/></g></svg>';
+}catch(e){document.querySelector('.qr').style.display='none'}
+
+var cols=['#d8b46a','#f0a8b8','#8fd3d0','#f3ece0'];
+var BF='<svg viewBox="0 0 40 30"><g class="wg"><path d="M20 15C14 2 3 3 4 12c1 7 9 8 16 3z"/><path d="M20 15C26 2 37 3 36 12c-1 7-9 8-16 3z"/><path opacity=".8" d="M20 15C13 18 9 27 14 27c4 0 6-6 6-12z"/><path opacity=".8" d="M20 15c7 3 11 12 6 12-4 0-6-6-6-12z"/></g><rect x="19" y="9" width="2" height="14" rx="1"/></svg>';
+function butterflies(){
+  if (reduce) return;
+  for (var i=0;i<16;i++){
+    var b=document.createElement('div'), sz=26+Math.random()*26;
+    b.className='bf'; b.style.cssText='left:'+(Math.random()*90)+'vw;width:'+sz+'px;fill:'+cols[i%4]+
+      ';animation-duration:'+(7+Math.random()*6)+'s;animation-delay:'+(Math.random()*2.5)+'s';
+    b.innerHTML='<div style="animation-duration:'+(1.2+Math.random()*1.2)+'s">'+BF+'</div>';
+    b.addEventListener('animationend',function(e){if(e.animationName==='rise')e.target.remove()});
+    document.body.appendChild(b);
+  }
+}
+
+/* الموسيقى: لحن كلاسيكي هادئ، يُجهَّز كملف صوتي عند فتح الصفحة ليعمل على كل الأجهزة */
+var audio=null, ctx=null, timer=null, playing=false, songURL=null;
+var CH=[
+ {b:73.42,t:[293.66,369.99,440,587.33]},
+ {b:110,t:[277.18,329.63,440,554.37]},
+ {b:123.47,t:[293.66,369.99,493.88,587.33]},
+ {b:92.5,t:[277.18,369.99,440,554.37]},
+ {b:98,t:[293.66,392,493.88,587.33]},
+ {b:73.42,t:[293.66,369.99,440,587.33]},
+ {b:98,t:[293.66,392,493.88,587.33]},
+ {b:110,t:[277.18,329.63,440,554.37]}
+];
+var PAT=[0,1,2,3,2,1,2,1];
+function wire(c){
+  var m=c.createGain(); m.gain.value=.8;
+  var dly=c.createDelay(1), fb=c.createGain(), lp=c.createBiquadFilter(), wet=c.createGain();
+  dly.delayTime.value=.32; fb.gain.value=.38; lp.type='lowpass'; lp.frequency.value=2200; wet.gain.value=.35;
+  m.connect(c.destination); m.connect(dly); dly.connect(lp); lp.connect(fb); fb.connect(dly); lp.connect(wet); wet.connect(c.destination);
+  return m;
+}
+function tone(c,m,f,t,type,vol,att,dur,cut){
+  var o=c.createOscillator(), g=c.createGain(), fl=c.createBiquadFilter();
+  o.type=type; o.frequency.value=f; fl.type='lowpass'; fl.frequency.value=cut;
+  g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(vol,t+att); g.gain.exponentialRampToValueAtTime(.0004,t+dur);
+  o.connect(fl); fl.connect(g); g.connect(m); o.start(t); o.stop(t+dur+.05);
+}
+function pluck(c,m,f,t,v){ tone(c,m,f,t,'triangle',v,.012,2.2,3000); tone(c,m,f*2,t,'sine',v*.25,.01,1.2,4000); }
+function chordStep(c,m,k,t){
+  var ch=CH[Math.floor(k/8)%CH.length], i=k%8;
+  if(i===0){ pluck(c,m,ch.b,t,.22); ch.t.slice(0,3).forEach(function(f){tone(c,m,f/2,t,'sawtooth',.018,1.2,3.4,700)}); }
+  pluck(c,m,ch.t[PAT[i]],t,.13);
+}
+function startSynth(){
+  var AC=window.AudioContext||window.webkitAudioContext; if(!AC) return;
+  ctx=new AC(); if(ctx.resume) ctx.resume();
+  var m=wire(ctx), k=0;
+  function step(){ chordStep(ctx,m,k++,ctx.currentTime+.05); }
+  step(); timer=setInterval(step,380);
+}
+function stopSynth(){ clearInterval(timer); timer=null; if(ctx){ctx.close();ctx=null} }
+function toWav(buf){
+  var d=buf.getChannelData(0), n=d.length, r=buf.sampleRate, ab=new ArrayBuffer(44+n*2), v=new DataView(ab);
+  function str(o,s){for(var i=0;i<s.length;i++)v.setUint8(o+i,s.charCodeAt(i))}
+  str(0,'RIFF'); v.setUint32(4,36+n*2,true); str(8,'WAVE'); str(12,'fmt '); v.setUint32(16,16,true);
+  v.setUint16(20,1,true); v.setUint16(22,1,true); v.setUint32(24,r,true); v.setUint32(28,r*2,true);
+  v.setUint16(32,2,true); v.setUint16(34,16,true); str(36,'data'); v.setUint32(40,n*2,true);
+  for(var i=0;i<n;i++){var x=Math.max(-1,Math.min(1,d[i])); v.setInt16(44+i*2,x<0?x*32768:x*32767,true)}
+  return URL.createObjectURL(new Blob([ab],{type:'audio/wav'}));
+}
+function prerender(){
+  try{
+    var OAC=window.OfflineAudioContext||window.webkitOfflineAudioContext; if(!OAC) return;
+    var rate=32000, oc=new OAC(1,Math.ceil(28*rate),rate), m=wire(oc);
+    for(var k=0;k<64;k++) chordStep(oc,m,k,k*.38+.05);
+    var fin=function(b){ songURL=toWav(b); if(!SONG_SRC){ audio=new Audio(songURL); audio.loop=true; audio.preload='auto'; } };
+    var pr=oc.startRendering();
+    if(pr&&pr.then) pr.then(fin); else oc.oncomplete=function(e){fin(e.renderedBuffer)};
+  }catch(e){}
+}
+prerender();
+function music(on){
+  playing=on;
+  if(SONG_SRC&&!audio){ audio=new Audio(SONG_SRC); audio.loop=true; }
+  if(on){
+    if(audio){ var pr=audio.play(); if(pr&&pr.catch) pr.catch(function(){ if(playing&&!ctx) startSynth(); }); }
+    else startSynth();
+  } else { if(audio) audio.pause(); stopSynth(); }
+  $('mus').textContent = on ? 'إيقاف الموسيقى' : 'تشغيل الموسيقى';
+  $('mus').setAttribute('aria-pressed', on);
+}
+$('mus').addEventListener('click',function(){music(!playing)});
+
+/* فتح القفل: الصوت يبدأ مباشرة مع الضغطة */
+$('lock').addEventListener('click',function(){
+  var L=$('lock'); if(L.classList.contains('opening')) return;
+  L.classList.add('opening');
+  music(true);
+  setTimeout(function(){
+    L.classList.add('gone'); $('inv').classList.add('show');
+    $('mus').style.display='block';
+    butterflies();
+    setTimeout(function(){L.style.display='none'},900);
+  },800);
+});
+</script>
+</body>
+</html>
